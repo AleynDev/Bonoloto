@@ -1,0 +1,20 @@
+1º Uso de CardLayout: https://docs.oracle.com/javase/tutorial/uiswing/layout/card.html
+    En el método main utilizo:
+        EventQueue.invokeLater(() -> {
+                    try {
+
+                        BonolotoApp bonolotoApp = new BonolotoApp();
+                        bonolotoApp.setVisible(true);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+
+    porque el procesamiento completo de Swing se realiza en un hilo llamado EDT (Event Dispatching Thread),
+    por lo que con esta función lamda me aseguro que, en caso de bloquearse, la app sea ejecutada en otro hilo (thread).
+
+2º Agregar imagen de fondo a JFrame: https://codigosparadesarrolladores.blogspot.com/2019/04/Agregar-imagen-de-fondo-a-un-JFrame.html
+
+3º Efecto Hover para los botones: https://www.youtube.com/watch?v=DhcVNT9lpvI
+
+4º Redondear bordes: https://es.stackoverflow.com/questions/64710/jbutton-con-bordes-redondos

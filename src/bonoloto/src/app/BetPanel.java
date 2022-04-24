@@ -82,8 +82,6 @@ public class BetPanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        Collections.sort(betList);
-        betInstructionText.setText(betList.toString());
         int index = (Integer.parseInt(e.getActionCommand()) - 1);
         if (betList.size() == 0) {
             betInstructionText.setText("Introduce 6 números");
@@ -109,6 +107,10 @@ public class BetPanel extends JPanel implements ActionListener {
         else {
             JOptionPane.showMessageDialog(null, "ya ha introducido 6 números");
         }
+
+        Collections.sort(betList);
+        betInstructionText.setText(betList.toString());
+        
     }
 
     private Image betPanelImage;
